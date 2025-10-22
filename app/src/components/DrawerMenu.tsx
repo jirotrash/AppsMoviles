@@ -1,9 +1,8 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
-import { View, Text, TouchableOpacity, Image } from 'react-native';
+import { View, Text, TouchableOpacity, Image, ImageBackground } from 'react-native';
 import { DrawerContentScrollView, DrawerContentComponentProps } from '@react-navigation/drawer';
 import { appTheme } from '../themes/appTheme';
-import { MarvelIcon } from './MarvelIcon';
 
 export const DrawerMenu = ( { navigation }:DrawerContentComponentProps ) => {
 
@@ -39,33 +38,32 @@ export const DrawerMenu = ( { navigation }:DrawerContentComponentProps ) => {
                     <TouchableOpacity
                         onPress={ () => navigation.navigate("PokemonNavigator") }
                     >
-                        <View
-                            style={appTheme.menuBtnWithImage}
+                        <ImageBackground
+                            source={require(assets + "/pokemonicon1.gif")}
+                            style={appTheme.menuBtnBackground}
+                            imageStyle={appTheme.backgroundImage}
                         >
-                            <Image
-                                source={require(assets + "/pokeball-light.png")}
-                                style={appTheme.menuIcon}
-                            />
-                            <Text
-                                style={appTheme.textBtnWithImage}
-                            >
-                                Pokedex
-                            </Text>
-                        </View>
+                            <View style={appTheme.overlay}>
+                                <Text style={appTheme.textBtnBackground}>
+                                    Pokedex
+                                </Text>
+                            </View>
+                        </ImageBackground>
                     </TouchableOpacity>
                     <TouchableOpacity
                         onPress={ () => navigation.navigate("CharacterNavigator") }
                     >
-                        <View
-                            style={appTheme.menuBtnWithImage}
+                        <ImageBackground
+                            source={require(assets + "/marvelicon1.gif")}
+                            style={appTheme.menuBtnBackground}
+                            imageStyle={appTheme.backgroundImage}
                         >
-                            <MarvelIcon />
-                            <Text
-                                style={appTheme.textBtnWithImage}
-                            >
-                                Marvel Heroes
-                            </Text>
-                        </View>
+                            <View style={appTheme.overlay}>
+                                <Text style={appTheme.textBtnBackground}>
+                                    Marvel Heroes
+                                </Text>
+                            </View>
+                        </ImageBackground>
                     </TouchableOpacity>
                     <TouchableOpacity
                         onPress={ () => navigation.navigate("TareaNavigator") }

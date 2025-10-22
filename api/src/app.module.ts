@@ -10,6 +10,8 @@ import { MisImagenesModule } from './misimagenes/misimagenes.module';
 import { MisImagen } from './misimagenes/entities/misimagen.entity';
 import { ClinicaMedicaModule } from './clinicamedica/clinicamedica.module';
 import { ClinicaMedica } from './clinicamedica/entities/clinicamedica.entity';
+import { PerfilCompletoModule } from './perfilcompleto/perfilcompleto.module';
+import { PerfilCompleto } from './perfilcompleto/entities/perfilcompleto.entity';
 
 
 @Module({
@@ -70,7 +72,7 @@ import { ClinicaMedica } from './clinicamedica/entities/clinicamedica.entity';
             username: "root",
             password: "",
             database: "perfilcompleto",
-            entities: [  ],
+            entities: [ PerfilCompleto ],
             synchronize: true,
             autoLoadEntities: true,
         }),
@@ -79,6 +81,7 @@ import { ClinicaMedica } from './clinicamedica/entities/clinicamedica.entity';
         UsuariosModule,
         MisImagenesModule,
         ClinicaMedicaModule,
+        PerfilCompletoModule,
     ],
   controllers: [AppController],
   providers: [AppService],

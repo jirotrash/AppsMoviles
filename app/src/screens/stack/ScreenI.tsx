@@ -18,17 +18,7 @@ export const ScreenI = ( { navigation } : Props ) => {
 
     const { authState, signIn, logout, changeUsername } = useContext( AuthContext );
     
-    const usuario: User = {
-        username:   "Chucho Ivan",
-        id_user:    25,
-        status:     false,
-    }
 
-    const usuario2: User = {
-        username:   "Irais",
-        id_user:    26,
-        status:     true,
-    }
 
     return(
         <View
@@ -45,22 +35,12 @@ export const ScreenI = ( { navigation } : Props ) => {
             <BtnTouch
                 titulo="Cambiar de username"
                 color='violet'
-                action={ () => changeUsername("Rita Karla Rubí") }
+                action={ () => changeUsername("chuchoivan") }
             />
             <Fab
                 titulo='->'
                 position="button_right"
                 action={ () => navigation.navigate("ScreenII") }
-            />
-            <BtnTouch
-                titulo={usuario.username}
-                color='violet'
-                action={ () => navigation.navigate("UserScreen",usuario) }
-            />
-            <BtnTouch
-                titulo={usuario2.username}
-                color='violet'
-                action={ () => navigation.navigate("UserScreen",usuario2) }
             />
         </View>
     )

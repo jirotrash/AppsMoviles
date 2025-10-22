@@ -69,10 +69,11 @@ export const appTheme = StyleSheet.create({
         shadowRadius: 4,
     },
     menuIcon:{
-        width: 30,
-        height: 30,
-        marginRight: 8,
-        borderRadius: 15,
+        width: 35,
+        height: 35,
+        marginRight: 10,
+        borderRadius: 8,
+        resizeMode: 'cover',
     },
     textBtn:{
         fontSize: 18,
@@ -85,5 +86,37 @@ export const appTheme = StyleSheet.create({
         color: "black",
         fontWeight: "bold",
         marginLeft: 5,
+    },
+    menuBtnBackground:{
+        marginVertical: 10,
+        width: 180,
+        height: 50,
+        borderRadius: 15,
+        overflow: 'hidden',
+        elevation: 4,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.3,
+        shadowRadius: 4,
+    },
+    backgroundImage:{
+        borderRadius: 15,
+        resizeMode: 'cover',
+    },
+    overlay:{
+        flex: 1,
+        backgroundColor: 'rgba(255, 255, 255, 0.4)',
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 15,
+    },
+    textBtnBackground:{
+        fontSize: 18,
+        color: "black",
+        fontWeight: "bold",
+        textAlign: "center",
+        textShadowColor: 'rgba(255, 255, 255, 0.9)',
+        textShadowOffset: {width: 2, height: 2},
+        textShadowRadius: 3,
     }
 });
