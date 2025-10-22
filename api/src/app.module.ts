@@ -1,0 +1,86 @@
+import { Module } from '@nestjs/common';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
+import { TareaModule } from './tareas/tarea.module';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { Tarea } from './tareas/entities/tarea.entity';
+import { UsuariosModule } from './usuarios/usuarios.module';
+import { Usuario } from './usuarios/entities/usuario.entity';
+import { MisImagenesModule } from './misimagenes/misimagenes.module';
+import { MisImagen } from './misimagenes/entities/misimagen.entity';
+import { ClinicaMedicaModule } from './clinicamedica/clinicamedica.module';
+import { ClinicaMedica } from './clinicamedica/entities/clinicamedica.entity';
+
+
+@Module({
+    imports: [
+        TypeOrmModule.forRoot({
+            name: 'usuarios',
+            type: "postgres",
+            host: "localhost",
+            port: 5432,
+            username: "chuchoivan",
+            password: "kfeputo123",
+            database: "dsm442025",
+            entities:  [ Usuario ],
+            synchronize: true,
+            autoLoadEntities: true,
+        }),
+        TypeOrmModule.forRoot({
+            name: 'tareas',
+            type: "mariadb",
+            host: "localhost",
+            port: 3306,
+            username: "root",
+            password: "",
+            database: "dsm44",
+            entities:  [ Tarea ],
+            synchronize: true,
+            autoLoadEntities: true,
+        }),
+        TypeOrmModule.forRoot({
+            name: 'lasimagenes',
+            type: "postgres",
+            host: "localhost",
+            port: 5432,
+            username: "chuchoivan",
+            password: "kfeputo123",
+            database: "lasimagenes",
+            entities: [ MisImagen ],
+            synchronize: true,
+            autoLoadEntities: true,
+        }),
+        TypeOrmModule.forRoot({
+            name: 'clinicamedica',
+            type: "postgres",
+            host: "localhost",
+            port: 5432,
+            username: "chuchoivan",
+            password: "kfeputo123",
+            database: "clinicamedica",
+            entities: [ ClinicaMedica ],
+            synchronize: true,
+            autoLoadEntities: true,
+        }),
+        TypeOrmModule.forRoot({
+            name: 'perfilcompleto',
+            type: "mysql",
+            host: "localhost",
+            port: 3306,
+            username: "root",
+            password: "",
+            database: "perfilcompleto",
+            entities: [  ],
+            synchronize: true,
+            autoLoadEntities: true,
+        }),
+
+        TareaModule,
+        UsuariosModule,
+        MisImagenesModule,
+        ClinicaMedicaModule,
+    ],
+  controllers: [AppController],
+  providers: [AppService],
+})
+export class AppModule {}
