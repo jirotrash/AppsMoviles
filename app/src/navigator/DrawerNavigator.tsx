@@ -6,6 +6,7 @@ import { PokemonNavigator } from "./PokemonNavigator";
 import { TareaNavigator } from "./TareaNavigator";
 import { ImagenNavigator } from "./ImagenNavigator";
 import { ClinicaNavigator } from "./ClinicaNavigator";
+import { Clinica2Navigator } from "./Clinica2Navigator";
 import { useWindowDimensions } from "react-native";
 import { DrawerMenu } from "../components/DrawerMenu";
 import { ImagePickerScreen } from "../screens/ImagePickerScreen";
@@ -20,6 +21,7 @@ export type RootDrawerNavigator = {
     TareaNavigator: undefined;
     ImagenNavigator: undefined;
     ClinicaNavigator: undefined;
+    Clinica2Navigator: undefined;
     CharacterNavigator: undefined;
     ImagePickerScreen: undefined;
     UserNavigator:  undefined;
@@ -68,6 +70,10 @@ const Navigator = () => {
             <Drawer.Screen
                 name="ClinicaNavigator"
                 component={ClinicaNavigator}
+            />
+            <Drawer.Screen
+                name="Clinica2Navigator"
+                component={Clinica2Navigator}
             />
             <Drawer.Screen
                 name="ImagePickerScreen"

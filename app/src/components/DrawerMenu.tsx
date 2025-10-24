@@ -105,6 +105,19 @@ export const DrawerMenu = ( { navigation }:DrawerContentComponentProps ) => {
                         </View>
                     </TouchableOpacity>
                     <TouchableOpacity
+                        onPress={ () => navigation.navigate("Clinica2Navigator") }
+                    >
+                        <View
+                            style={appTheme.menuBtn}
+                        >
+                            <Text
+                                style={appTheme.textBtn}
+                            >
+                                Clínica Médica 2
+                            </Text>
+                        </View>
+                    </TouchableOpacity>
+                    <TouchableOpacity
                         onPress={ () => navigation.navigate("StackNav") }
                     >
                         <View

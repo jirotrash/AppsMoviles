@@ -1,6 +1,6 @@
 // Configuración centralizada de la API
 export const API_CONFIG = {
-    BASE_URL: "http://192.168.0.200:3000",
+    BASE_URL: "http://192.168.3.155:3000",
 
     PREFIX: "/api/dsm44",
     
@@ -10,7 +10,8 @@ export const API_CONFIG = {
         LOGIN: "/usuarios/login",
         TAREAS: "/tarea",
         IMAGENES: "/misimagenes",
-        CLINICA: "/clinicamedica"
+        CLINICA: "/clinicamedica",
+        CLINICA2: "/clinicamedica2"
     },
     
     // URLs completas
@@ -32,5 +33,9 @@ export const API_CONFIG = {
 
     get CLINICA_URL() {
         return `${this.BASE_URL}${this.PREFIX}${this.ENDPOINTS.CLINICA}`;
+    },
+
+    get CLINICA2_URL() {
+        return `${this.BASE_URL}${this.PREFIX}${this.ENDPOINTS.CLINICA2}`;
     },
 };

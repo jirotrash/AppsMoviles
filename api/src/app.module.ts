@@ -12,6 +12,8 @@ import { ClinicaMedicaModule } from './clinicamedica/clinicamedica.module';
 import { ClinicaMedica } from './clinicamedica/entities/clinicamedica.entity';
 import { PerfilCompletoModule } from './perfilcompleto/perfilcompleto.module';
 import { PerfilCompleto } from './perfilcompleto/entities/perfilcompleto.entity';
+import { ClinicaMedica2Module } from './clinicamedica2/clinicamedica2.module';
+import { ClinicaMedica as ClinicaMedica2 } from './clinicamedica2/entities/clinicamedica.entity';
 
 
 @Module({
@@ -76,12 +78,26 @@ import { PerfilCompleto } from './perfilcompleto/entities/perfilcompleto.entity'
             synchronize: true,
             autoLoadEntities: true,
         }),
+        TypeOrmModule.forRoot({
+            name: 'clinicamedica2',
+            type: "postgres",
+            host: "localhost",
+            port: 5432,
+            username: "chuchoivan",
+            password: "kfeputo123",
+            database: "clinicamedica2",
+            entities: [ ClinicaMedica2 ],
+            synchronize: true,
+            autoLoadEntities: true,
+        }),
+
 
         TareaModule,
         UsuariosModule,
         MisImagenesModule,
         ClinicaMedicaModule,
         PerfilCompletoModule,
+        ClinicaMedica2Module,
     ],
   controllers: [AppController],
   providers: [AppService],
