@@ -56,7 +56,7 @@ export const HomeClinica = ({ navigation }: Props) => {
                     <Text style={styles.info}>Edad: {item.edad} años</Text>
                     <Text style={styles.info}>Sexo: {item.sexo}</Text>
                     <Text style={styles.info}>Teléfono: {item.telefono}</Text>
-                    <Text style={styles.viewMore}>👁️ Ver más detalles</Text>
+                    <Text style={styles.viewMore}>Ver más detalles</Text>
                 </View>
             </View>
         </TouchableOpacity>
@@ -64,7 +64,7 @@ export const HomeClinica = ({ navigation }: Props) => {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Historias Clínicas</Text>
+            <Text style={styles.title}>Historial Clínico</Text>
             
             <FlatList
                 data={pacientes}

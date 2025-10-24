@@ -77,7 +77,7 @@ export const HomeClinica2 = ({ navigation }: Props) => {
                     <Text style={styles.info}>Edad: {item.edad} años</Text>
                     <Text style={styles.info}>Sexo: {item.sexo}</Text>
                     <Text style={styles.info}>Teléfono: {item.telefono || 'N/A'}</Text>
-                    <Text style={styles.viewMore}>👁️ Ver más detalles</Text>
+                    <Text style={styles.viewMore}>Ver más detalles</Text>
                 </View>
             </TouchableOpacity>
             

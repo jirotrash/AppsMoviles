@@ -15,7 +15,6 @@ import { PerfilCompleto } from './perfilcompleto/entities/perfilcompleto.entity'
 import { ClinicaMedica2Module } from './clinicamedica2/clinicamedica2.module';
 import { ClinicaMedica as ClinicaMedica2 } from './clinicamedica2/entities/clinicamedica.entity';
 
-
 @Module({
     imports: [
         TypeOrmModule.forRoot({
@@ -90,8 +89,6 @@ import { ClinicaMedica as ClinicaMedica2 } from './clinicamedica2/entities/clini
             synchronize: true,
             autoLoadEntities: true,
         }),
-
-
         TareaModule,
         UsuariosModule,
         MisImagenesModule,
